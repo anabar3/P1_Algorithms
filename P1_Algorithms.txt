@@ -1,0 +1,95 @@
+ALGORITHMS PRACTICE 1
+
+STUDENT 1: Javier Carballal Morgade       LOGIN 1: javier.carballal.morgade@udc.es
+STUDENT 2: Diego Martínez Novoa           LOGIN 2: diego.martinez6@udc.es
+STUDENT 3: Ana Barrera Novas              LOGIN 3: ana.barrera@udc.es
+GROUP: 6.1
+DATE: 30/09/23
+
+********************************************************************
+
+This practice consists in comparing two algorithms which aim is to obtain
+the maximum subsequence sum. Next, we will show the details of the measurements taken.
+
+COMPUTER:
+
+Machine: HP OMEN 15-dc0035ns
+CPU:     Intel® Core™ i7-8750H CPU @ 2.20GHz x 12
+RAM:     15,4 GiB
+SO:      Zorin OS 16.3 x86_64
+Kernel:  5.15.0-84-generic
+
+
+Time unit used in the report: microseconds (μs).
+
+EXERCISES:
+
+Exercise 1
+For this exercise, we run the algorithms with the given arrays and checked
+whether they gave the expected result. For more clarity and ease of use, we 
+printed a column with the correct values and colored the results in green if they were
+correct, and in red if they weren't. With that, errors were easily spotted and we can
+conclude that they were implemented correctly.
+
+Exercise 2
+In order to ensure that the algorithms were giving the same results, we ran both of
+them with random arrays of fixed length. This was to cover possible errors
+that were not contemplated with the test cases form exercise 1. 
+
+Exercises 3 and 4
+To compare the performance of the algorithms we ran them against random arrays of
+increasing sizes and measured the time taken for each of them to finish.
+For more reliability, we made 50 measurements with different arrays for each size and took the average value.
+
+The conclusion by observing the table obtained is that Algorithm 2 is overall faster
+and grows slower as input size increases.
+
+An asterisk (*) is used for cases where the time taken by the first measurement is 
+smaller than 500 microseconds, where the method of the measurement is overriden by
+a different one, more precise with small times. The only change is that the time is 
+calculated by repeating the function 1000 times and then dividing in order to get the
+average time. 
+
+Using Algorithm 1:
+Bounds - n^1.8, n^2, n^2.2
+
+   Size            t(n)          t(n)/n^1.8       t(n)/n^2     t(n)/n^2.2
+*  500          266.462            0.003694       0.001066       0.000308
+   1000         987.010            0.003929       0.000987       0.000248
+   2000        3851.340            0.004403       0.000963       0.000211
+   4000       15668.480            0.005144       0.000979       0.000186
+   8000       64271.260            0.006060       0.001004       0.000166
+   16000     248383.560            0.006725       0.000970       0.000140
+   32000    1008896.270            0.007845       0.000985       0.000124
+                                                  0.000994
+
+We can observe that in the underestimated bound we obtain growing results,
+while in the overestimated bound we obtain decreasing ones. In the tight bound
+we can see that the values are surrounding a constant 0.000994.
+With this, we can conclude that the algorithm has, in fact, a complexity O(n^2)
+
+Algorithm 2
+Bounds - n^0.8, n, n^1.2
+
+ALGORITHM 2:
+
+   Size            t(n)           t(n)/n^0.8       t(n)/n       t(n)/n^1.2
+*  500            1.091            0.007560       0.002181       0.000629
+*  1000           2.167            0.008627       0.002167       0.000544
+*  2000           4.221            0.009650       0.002110       0.000461
+*  4000           8.374            0.010998       0.002094       0.000399
+*  8000          16.465            0.012419       0.002058       0.000341
+*  16000         33.043            0.014315       0.002065       0.000298
+*  32000         65.061            0.016188       0.002033       0.000255
+                                                  0.002101
+
+Just like before, we can see that in the underestimated bound the values grow, while
+in the overestimated one they decrease. In the tight bound we obtain a constant of
+0.002101, which means that the algorithm has complexity O(n).
+
+With all of this, we can conclude that everything works correctly. Bounds behave
+as they should, measurements are adecuate and the theoretical complexity of the
+algorithms are empirically checked. Algorithm 2, with O(n) is overall faster and
+more efficient than Algorithm 1, with complexity O(n^2).
+ 
+ 
