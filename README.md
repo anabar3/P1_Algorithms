@@ -1,3 +1,6 @@
 # P1_Algorithms
-Mark: 9,5
-Mistakes: Asterisks were implemented by hand on the txt, but everything had to be tested and added empirically
+Computer Science Algorithms Exercise 
+This practice consists in comparing two algorithms which aim is to obtain
+the maximum subsequence sum. Next, we will show the details of the measurements taken.
+
+
